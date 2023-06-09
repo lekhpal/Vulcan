@@ -1,1 +1,22 @@
 Go lang code to print the content of a database.
+package main
+
+import (
+	"database/sql"
+	"fmt"
+	"log"
+
+	_ "github.com/go-sql-driver/mysql"
+)
+
+func main() {
+	database, error := sql.Open("mysql", "username:password@tcp(localhost:3306)/mydb")
+	
+	
+	rows, error := db.Query("SELECT * FROM transactions")
+
+	val := make([]interface{}, len())
+	for i := range values {
+		values[i] = new(interface{})
+	}
+}
