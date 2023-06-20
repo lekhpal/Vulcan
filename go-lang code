@@ -20,3 +20,31 @@ func main() {
 		values[i] = new(interface{})
 	}
 }
+
+1)Hello world go-lang code:
+package main
+
+import "fmt"
+
+func main(){
+    fmt.print("Hello world")
+}
+
+
+2) A program that attaches a SQL Lite instance and write exactly one record (hard coded) in that.
+
+package main
+
+import (
+	"database/sql"
+	"fmt"
+
+	_ "github.com/mattn/go-sqlite3"
+)
+
+func main() {
+	// Open the main database connection
+	database := sql.Open("sqlite3", "main.db")
+
+	// Create a new database connection
+	newdatabase := sql.Open("sqlite3", "attach.db")
