@@ -42,9 +42,12 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 )
 
-func main() {
-	
-	database := sql.Open("sqlite3", "main.db")
+func database(string name) {
+	//To create a new database after attaching the sqlite instance.
+	database := sql.Open("sqlite3", "C:\sqlite3")
+	mydb = db.Exec("CREATE DATABASE;"+name)
 
-	
-	newdatabase := sql.Open("sqlite3", "attach.db")
+        table = db.Exec("CREATE TABLE transactions (DATE VARCHAR(50), DETAILS VARCHAR(50), DEPOSIT INTEGER, WITHDRAWL INTEGER, BALANCE INTEGER);")
+
+
+        
