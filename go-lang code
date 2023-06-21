@@ -47,7 +47,10 @@ func database(string name) {
 	database := sql.Open("sqlite3", "C:\sqlite3")
 	mydb = db.Exec("CREATE DATABASE;"+name)
 
+        //Creating the table
         table = db.Exec("CREATE TABLE transactions (DATE VARCHAR(50), DETAILS VARCHAR(50), DEPOSIT INTEGER, WITHDRAWL INTEGER, BALANCE INTEGER);")
+
+
 
 
         
