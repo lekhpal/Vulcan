@@ -1,1 +1,56 @@
+Go lang code to print the content of a database.
+package main
 
+import (
+	"database/sql"
+	"fmt"
+	"log"
+
+	_ "github.com/go-sql-driver/mysql"
+)
+
+func main() {
+	database, error := sql.Open("mysql", "username:password@tcp(localhost:3306)/mydb")
+	
+	
+	rows, error := db.Query("SELECT * FROM transactions")
+
+	val := make([]interface{}, len())
+	for i := range values {
+		values[i] = new(interface{})
+	}
+}
+
+1)Hello world go-lang code:
+package main
+
+import "fmt"
+
+func main(){
+    fmt.print("Hello world")
+}
+
+
+2) A program that attaches a SQL Lite instance and write exactly one record (hard coded) in that.
+
+package main
+
+import (
+	"database/sql"
+	"fmt"
+
+	_ "github.com/mattn/go-sqlite3"
+)
+
+func database(string name) {
+	//To create a new database after attaching the sqlite instance.
+	database := sql.Open("sqlite3", "C:\sqlite3")
+	mydb = db.Exec("CREATE DATABASE;"+name)
+
+        //Creating the table
+        table = db.Exec("CREATE TABLE transactions (DATE VARCHAR(50), DETAILS VARCHAR(50), DEPOSIT INTEGER, WITHDRAWL INTEGER, BALANCE INTEGER);")
+
+
+
+
+        
